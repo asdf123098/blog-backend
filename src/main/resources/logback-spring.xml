@@ -11,13 +11,10 @@
         </encoder>
         <file>${LOG_FILE}</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.%i</FileNamePattern>
+            <FileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}</FileNamePattern>
             <!-- 保留历史日志一个月的时间 -->
             <maxHistory>30</maxHistory>
             <!-- Springboot默认在10M时切分目录，如下配置在100M时切分 -->
-            <timebasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>10MB</maxFileSize>
-            </timebasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
     </appender>
 
