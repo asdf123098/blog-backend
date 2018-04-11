@@ -1,6 +1,4 @@
 spring:
-  thymeleaf:
-    mode: HTML5
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
@@ -8,12 +6,15 @@ spring:
     password: 123456
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
 logging:
   level:
-    root: info
-    com.zsj: debug
-  file: log/blog.log
+    root: warn
+    com.zsj: info
+  file: log/blog-pro.log
+server:
+  port: 8081
+
 
 
